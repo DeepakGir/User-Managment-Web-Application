@@ -235,7 +235,7 @@ This project is licensed under the **MIT License** — feel free to use, modify,
 ## 👤 Author
 
 **Deepak**
-🔗 [GitHub](https://github.com/your-username) • [LinkedIn](https://linkedin.com/in/your-profile)
+🔗 [GitHub](https://github.com/DeepakGir) • [LinkedIn](https://linkedin.com/in/your-profile)
 
 ---
 
