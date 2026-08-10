@@ -79,17 +79,12 @@ This makes the project a good practical example for learning **Java Web Developm
 
 ### ➕ Add User
 
-![Add User](screenshots/add-user.png)
+![Add User](screenshots/add_user.png)
 
 ### ✏️ Edit User
 
-![Edit User](screenshots/edit-user.png)
+![Edit User](screenshots/edit_user.png)
 
-### 📱 Responsive View
-
-![Responsive View](screenshots/responsive.png)
-
----
 
 ## 🎨 User Interface
 
