@@ -933,7 +933,6 @@ screenshots/
 
 Then the README will automatically display them using:
 
-```markdown
 ![User List](screenshots/user-list.png)
 ```
 
