@@ -136,47 +136,47 @@ The navigation provides quick access to:
 
 ## 🏗️ Application Architecture
 
-The project follows a simple layered MVC-style architecture:
 
-```text
-                ┌───────────────────────┐
-                │       Browser         │
-                │   HTML / Bootstrap    │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                ┌───────────────────────┐
-                │        JSP Views      │
-                │ user-list.jsp         │
-                │ user-form.jsp         │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                ┌───────────────────────┐
-                │      UserServlet      │
-                │  Request Controller   │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                ┌───────────────────────┐
-                │        UserDao        │
-                │ Database Operations   │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                ┌───────────────────────┐
-                │         JDBC          │
-                │ MySQL Connection      │
-                └───────────┬───────────┘
-                            │
-                            ▼
-                ┌───────────────────────┐
-                │        MySQL          │
-                │        DBM            │
-                └───────────────────────┘
+
+This project follows the classic **MVC + DAO** pattern used in traditional Java EE apps:
+
+
+
+```mermaid
+
+flowchart LR
+
+    Browser -->|HTTP Request| Servlet[UserServlet<br/>Controller]
+
+    Servlet -->|calls| DAO[UserDao<br/>Data Access Layer]
+
+    DAO -->|JDBC PreparedStatement| DB[(MySQL<br/>DBM database)]
+
+    Servlet -->|forwards to| JSP[JSP Views<br/>user-list / user-form]
+
+    JSP -->|renders HTML| Browser
+
 ```
 
+
+
+| Layer | Class/File | Responsibility |
+
+|-------|------------|-----------------|
+
+| **Model** | `User.java`, `Classes.java` | Plain Java objects representing data |
+
+| **DAO** | `UserDao.java` | All database operations (insert, select, update, delete) |
+
+| **Controller** | `UserServlet.java` | Handles HTTP requests, routes actions |
+
+| **View** | `user-list.jsp`, `user-form.jsp`, `Error.jsp` | Renders the UI |
+
+
+
 ---
+
+
 
 # 📂 Project Structure
 
